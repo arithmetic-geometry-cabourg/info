@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arithmetic Geometry in Cabourg</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and basic styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: url(cabourg.webp) no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    /* Semi-transparent container to ensure text readability */
+    .content-wrapper {
+      background: rgba(255, 255, 255, 0.8);
+      margin: 0 auto;
+      max-width: 1100px;
+      padding: 0 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    a {
+      color: #1e3c72;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #2a5298;
+    }
+    
+    /* Header with gradient overlay */
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 20px;
+    }
+    
+    /* Section styling */
+    section {
+      background: transparent;
+      padding: 30px 0;
+      animation: fadeIn 1s ease-out;
+    }
+    section h2 {
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 20px;
+      color: #1e3c72;
+      border-bottom: 2px solid #1e3c72;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    
+    /* Schedule Table Styling */
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .schedule-table th, .schedule-table td {
+      padding: 15px;
+      border: 1px solid #ddd;
+      text-align: center;
+      background: #f9f9f9;
+    }
+    .schedule-table th {
+      background-color: #1e3c72;
+      color: #fff;
+      font-weight: 600;
+    }
+    .schedule-table tr:hover td {
+      background-color: #f1f1f1;
+    }
+    
+    /* Speakers List Styling */
+    ul.speakers-list {
+      list-style: none;
+    }
+    ul.speakers-list li {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    ul.speakers-list li:last-child {
+      border-bottom: none;
+    }
+    
+    /* Footer styling */
+    footer {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 32px;
+      }
+      header p {
+        font-size: 16px;
+      }
+      .schedule-table th, .schedule-table td {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content-wrapper">
+    <header>
+      <h1>Arithmetic Geometry in Cabourg</h1>
+      <p>Conference on Arithmetic Geometry</p>
+    </header>
+    
+    <section class="event-details">
+      <div>
+        <h2>Event Details</h2>
+        <p><strong>Dates:</strong> 12 – 16 May 2025</p>
+        <p><strong>Location:</strong> Cabourg, Normandy, France</p>
+        <p><strong>Venue:</strong> 
+          <a href="https://www.sweethome-cabourg.com/" target="_blank">Sweet Home Cabourg</a>
+        </p>
+        <p>
+          <strong>Main Theme:</strong> Arithmetic geometry in a broad sense with emphasis on 
+          non-Archimedean degenerations, arithmetic dynamics, and Arakelov geometry.
+        </p>
+        <p>
+          <strong>Organizers:</strong> François Ballaÿ, Jérôme Poineau, and Robert Wilms 
+          (Université de Caen Normandie).
+        </p>
+        <p><strong>Registration:</strong> Registration is closed.</p>
+      </div>
+    </section>
+    
+    <section class="schedule">
+      <h2>Conference Schedule</h2>
+      <p><strong>Arrival:</strong> 11 May 2025 &nbsp;&nbsp; | &nbsp;&nbsp; 
+         <strong>Departure:</strong> 16 May 2025 (after lunch)</p>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>12 May</th>
+            <th>13 May</th>
+            <th>14 May</th>
+            <th>15 May</th>
+            <th>16 May</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section class="speakers">
+      <h2>Speakers</h2>
+      <ul class="speakers-list">
+        <li>José Ignacio Burgos Gil (ICMAT Madrid)</li>
+        <li>Gabriel Dill (Université de Neuchâtel)</li>
+        <li>Thomas Gauthier (Université Paris-Saclay)</li>
+        <li>Philipp Habegger (Universität Basel)</li>
+        <li>Ariyan Javanpeykar (Radboud Universiteit Nijmegen)</li>
+        <li>Robin de Jong (Universiteit Leiden)</li>
+        <li>Myrto Mavraki (University of Toronto)</li>
+        <li>Vlerë Mehmeti (Sorbonne Université)</li>
+        <li>Noema Nicolussi (TU Graz)</li>
+        <li>Fabien Pazuki (Københavns Universitet)</li>
+        <li>Riccardo Pengo (Università degli Studi di Messina)</li>
+        <li>Leonard Pille-Schneider (Universität Regensburg)</li>
+        <li>Rémi Reboulet (Université Claude Bernard Lyon 1)</li>
+        <li>Harry Schmidt (University of Warwick)</li>
+        <li>Martin Sombra (Universitat de Barcelona)</li>
+      </ul>
+    </section>
+    
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>For inquiries, please email us at 
+        <a href="mailto:arithmetic.geometry.cabourg@gmail.com">
+          arithmetic.geometry.cabourg@gmail.com
+        </a>.
+      </p>
+    </section>
+    
+    <footer>
+      <p>&copy; 2025 Arithmetic Geometry in Cabourg. All Rights Reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
+
