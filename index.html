@@ -24,8 +24,6 @@
       background-size: cover;
       overflow-x: hidden;
     }
-
-    /* Semi-transparent container to ensure text readability */
     .content-wrapper {
       background: rgba(255, 255, 255, 0.8);
       margin: 0 auto;
@@ -34,7 +32,6 @@
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    
     a {
       color: #1e3c72;
       text-decoration: none;
@@ -44,14 +41,15 @@
       color: #2a5298;
     }
     
-    /* Header with gradient overlay */
+    /* Header styling with creative logo integration */
     header {
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: #fff;
-      padding: 60px 20px;
+      padding: 60px 20px 20px;
       text-align: center;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
+      position: relative;
     }
     header h1 {
       font-family: 'Montserrat', sans-serif;
@@ -60,6 +58,55 @@
     }
     header p {
       font-size: 20px;
+    }
+    
+    /* Kreative Logo-Anordnung */
+    .creative-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin: 20px 0;
+    }
+    .creative-logos img {
+      max-height: 80px;
+      height: auto;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+    .creative-logos .logo-left {
+      transform: rotate(-10deg);
+    }
+    .creative-logos .logo-middle {
+      transform: scale(1.1);
+    }
+    .creative-logos .logo-right {
+      transform: rotate(10deg);
+    }
+    .creative-logos img:hover {
+      transform: scale(1.15);
+    }
+    
+    /* Navigations-Reiter */
+    nav {
+      margin-top: 20px;
+    }
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    .nav-menu li a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    .nav-menu li a:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
     
     /* Section styling */
@@ -120,13 +167,12 @@
       border-bottom-right-radius: 8px;
     }
     
-    /* Animations */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
     
-    /* Responsive */
+    /* Responsive adjustments */
     @media (max-width: 768px) {
       header h1 {
         font-size: 32px;
@@ -134,9 +180,19 @@
       header p {
         font-size: 16px;
       }
+      .creative-logos {
+        gap: 20px;
+      }
+      .creative-logos img {
+        max-height: 60px;
+      }
       .schedule-table th, .schedule-table td {
         font-size: 14px;
         padding: 10px;
+      }
+      .nav-menu {
+        flex-wrap: wrap;
+        gap: 15px;
       }
     }
   </style>
@@ -146,9 +202,27 @@
     <header>
       <h1>Arithmetic Geometry in Cabourg</h1>
       <p>Conference on Arithmetic Geometry</p>
+      
+      <!-- Kreative Logo-Anordnung -->
+      <div class="creative-logos">
+        <img src="cnrs.jpg" alt="CNRS Logo" class="logo-left">
+        <img src="lmno.png" alt="LMNO Logo" class="logo-middle">
+        <img src="logocaen.jpg" alt="Université de Caen Normandie Logo" class="logo-right">
+      </div>
+      
+      <!-- Navigations-Reiter -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#event-details">Event Details</a></li>
+          <li><a href="#travel-info">Travel Information</a></li>
+          <li><a href="#schedule">Conference Schedule</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     
-    <section class="event-details">
+    <section id="event-details" class="event-details">
       <div>
         <h2>Event Details</h2>
         <p><strong>Dates:</strong> 12 – 16 May 2025</p>
@@ -168,7 +242,7 @@
       </div>
     </section>
     
-    <section class="travel-info">
+    <section id="travel-info" class="travel-info">
       <h2>Travel Information</h2>
       
       <h3>Arrival – Sunday 11 May 2025</h3>
@@ -194,7 +268,7 @@
       </ul>
     </section>
     
-    <section class="schedule">
+    <section id="schedule" class="schedule">
       <h2>Conference Schedule</h2>
       <p><strong>Arrival:</strong> 11 May 2025 &nbsp;&nbsp; | &nbsp;&nbsp; 
          <strong>Departure:</strong> 16 May 2025 (after lunch)</p>
@@ -248,7 +322,7 @@
       </table>
     </section>
     
-    <section class="speakers">
+    <section id="speakers" class="speakers">
       <h2>Speakers</h2>
       <ul class="speakers-list">
         <li>José Ignacio Burgos Gil (ICMAT Madrid)</li>
@@ -269,7 +343,7 @@
       </ul>
     </section>
     
-    <section class="contact">
+    <section id="contact" class="contact">
       <h2>Contact</h2>
       <p>For inquiries, please email us at 
         <a href="mailto:arithmetic.geometry.cabourg@gmail.com">
