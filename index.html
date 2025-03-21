@@ -87,26 +87,33 @@
       transform: scale(1.15);
     }
     
-    /* Navigations-Reiter */
-    nav {
-      margin-top: 20px;
+    /* Sticky Navigation Bar */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+      padding: 5px 0;
     }
-    .nav-menu {
+    .sticky-nav .nav-menu {
       list-style: none;
       display: flex;
       justify-content: center;
       gap: 30px;
+      margin: 0;
+      padding: 0;
     }
-    .nav-menu li a {
-      color: #fff;
+    .sticky-nav .nav-menu li a {
+      color: #1e3c72;
       font-weight: 600;
       text-decoration: none;
       padding: 8px 12px;
       border-radius: 4px;
       transition: background 0.3s ease;
     }
-    .nav-menu li a:hover {
-      background: rgba(255, 255, 255, 0.2);
+    .sticky-nav .nav-menu li a:hover {
+      background: rgba(30, 60, 114, 0.1);
     }
     
     /* Section styling */
@@ -190,7 +197,7 @@
         font-size: 14px;
         padding: 10px;
       }
-      .nav-menu {
+      .sticky-nav .nav-menu {
         flex-wrap: wrap;
         gap: 15px;
       }
@@ -209,18 +216,18 @@
         <img src="lmno.png" alt="LMNO Logo" class="logo-middle">
         <img src="logocaen.jpg" alt="Université de Caen Normandie Logo" class="logo-right">
       </div>
-      
-      <!-- Navigations-Reiter -->
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#event-details">Event Details</a></li>
-          <li><a href="#travel-info">Travel Information</a></li>
-          <li><a href="#schedule">Conference Schedule</a></li>
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
     </header>
+    
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky-nav">
+      <ul class="nav-menu">
+        <li><a href="#event-details">Event Details</a></li>
+        <li><a href="#travel-info">Travel Information</a></li>
+        <li><a href="#schedule">Conference Schedule</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     
     <section id="event-details" class="event-details">
       <div>
@@ -266,6 +273,9 @@
         <li>Bus Cabourg 16h03 &gt; Deauville 16h49 and Train Deauville-Trouville 17h22 &gt; Paris Saint-Lazare 19h30</li>
         <li>Bus Cabourg 17h45 &gt; Deauville 18h26 and Train Deauville-Trouville 19h17 &gt; Paris Saint-Lazare 21h36 (one change in Lisieux)</li>
       </ul>
+      
+      <!-- Neuer Satz zur Fahrgemeinschaft -->
+      <p>If you are traveling at a different time and are interested in carpooling, please let us know.</p>
     </section>
     
     <section id="schedule" class="schedule">
