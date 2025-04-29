@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arithmetic Geometry in Cabourg</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600&display=swap" rel="stylesheet">
-  <style>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arithmetic Geometry in Cabourg</title>
+<link href="css.css" rel="stylesheet">
+<style>
     /* Reset und Grundstile */
     * {
       margin: 0;
@@ -209,202 +209,726 @@
         gap: 15px;
       }
     }
-  </style>
-</head>
-<body>
-  <div class="content-wrapper">
-    <header>
-      <h1>Arithmetic Geometry in Cabourg</h1>
-      <p>Conference on Arithmetic Geometry</p>
-      
-      <!-- Kreative Logo-Anordnung -->
-      <div class="creative-logos">
-        <img src="cnrs.jpg" alt="CNRS Logo" class="logo-left">
-        <img src="lmno.png" alt="LMNO Logo" class="logo-middle">
-        <img src="logocaen.jpg" alt="Université de Caen Normandie Logo" class="logo-right">
-      </div>
-    </header>
-    
-    <!-- Sticky Navigation -->
-    <nav class="sticky-nav">
-      <ul class="nav-menu">
-        <li><a href="#event-details">Event Details</a></li>
-        <li><a href="#travel-info">Travel Information</a></li>
-        <li><a href="#schedule">Conference Schedule</a></li>
-        <li><a href="#speakers">Speakers</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    
-    <section id="event-details" class="event-details">
-      <div>
-        <h2>Event Details</h2>
-        <p><strong>Dates:</strong> 12 – 16 May 2025</p>
-        <p><strong>Location:</strong> Cabourg, Normandy, France</p>
-        <p><strong>Venue:</strong> 
-          <a href="https://www.sweethome-cabourg.com/" target="_blank">Sweet Home Cabourg</a>
-        </p>
-        <p>
-          <strong>Main Theme:</strong> Arithmetic geometry in a broad sense with emphasis on 
+  
+    /* Modal styles */
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background: rgba(0,0,0,0.4); }
+    .modal-content { background: #fff; margin: 10% auto; padding: 20px; border-radius: 8px; max-width: 600px; position: relative; }
+    .close { position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer; }
+    .modal-content h2, .modal-content h3 { margin-bottom: 15px; }
+</style>
+<script src="polyfill.min.js"></script><script async="async" id="MathJax-script" src="tex-mml-chtml.js"></script><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+</style></head>
+<body class="vsc-initialized">
+<div class="content-wrapper">
+<header>
+<h1>Arithmetic Geometry in Cabourg</h1>
+<p>Conference on Arithmetic Geometry</p>
+<!-- Kreative Logo-Anordnung -->
+<div class="creative-logos">
+<img alt="CNRS Logo" class="logo-left" src="cnrs.jpg">
+<img alt="LMNO Logo" class="logo-middle" src="lmno.png">
+<img alt="Université de Caen Normandie Logo" class="logo-right" src="logocaen.jpg">
+</div>
+</header>
+<!-- Sticky Navigation -->
+<nav class="sticky-nav">
+<ul class="nav-menu">
+<li><a href="#event-details">Event Details</a></li>
+<li><a href="#travel-info">Travel Information</a></li>
+<li><a href="#schedule">Conference Schedule</a></li>
+<li><a href="#speakers">Speakers</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<section class="event-details" id="event-details">
+<div>
+<h2>Event Details</h2>
+<p><strong>Dates:</strong> 12 – 16 May 2025</p>
+<p><strong>Location:</strong> Cabourg, Normandy, France</p>
+<p><strong>Venue:</strong>
+<a href="https://www.sweethome-cabourg.com/" target="_blank">Sweet Home Cabourg</a>
+</p>
+<p>
+<strong>Main Theme:</strong> Arithmetic geometry in a broad sense with emphasis on 
           non-Archimedean degenerations, arithmetic dynamics, and Arakelov geometry.
         </p>
-        <p>
-          <strong>Organizers:</strong> François Ballaÿ, Jérôme Poineau, and Robert Wilms 
+<p>
+<strong>Organizers:</strong> François Ballaÿ, Jérôme Poineau, and Robert Wilms 
           (Université de Caen Normandie).
         </p>
-        <p><strong>Registration:</strong> Registration is closed.</p>
-      </div>
-    </section>
-    
-    <section id="travel-info" class="travel-info">
-      <h2>Travel Information</h2>
-      
-      <h3>Arrival – Sunday 11 May 2025</h3>
-      <p>To arrive in Cabourg by train from Paris, there are two options from Paris Saint-Lazare to Cabourg (with a stop in Trouville-Deauville):</p>
-      <ul>
-        <li><strong>Option 1:</strong> Paris Saint-Lazare 15:25 &gt; Trouville-Deauville 18:11 and then 18:17 &gt; Cabourg 18:46
+<p><strong>Registration:</strong> Registration is closed.</p>
+</div>
+</section>
+<section class="travel-info" id="travel-info">
+<h2>Travel Information</h2>
+<h3>Arrival – Sunday 11 May 2025</h3>
+<p>To arrive in Cabourg by train from Paris, there are two options from 
+Paris Saint-Lazare to Cabourg (with a stop in Trouville-Deauville):</p>
+<ul>
+<li><strong>Option 1:</strong> Paris Saint-Lazare 15:25 &gt; Trouville-Deauville 18:11 and then 18:17 &gt; Cabourg 18:46
           <em>(risky: only six minutes to change in Deauville but there is another train at 19:34 &gt; 20:04)</em>
-        </li>
-        <li><strong>Option 2:</strong> Paris Saint-Lazare 18:25 &gt; Trouville-Deauville 20:48 and then 20:57 &gt; Cabourg 21:27
+</li>
+<li><strong>Option 2:</strong> Paris Saint-Lazare 18:25 &gt; Trouville-Deauville 20:48 and then 20:57 &gt; Cabourg 21:27
           <em>(Slightly less risky: 9 minutes to change in Deauville, but no later connection to Cabourg)</em>
-        </li>
-      </ul>
-      
-      <h3>Departure – Friday 16 May 2025</h3>
-      <p>From Cabourg to Paris, one can take a bus from Cabourg to Deauville (ca. 45 minutes) and then a train from Deauville to Paris (es gibt keinen Direktzug von Cabourg nach Deauville).</p>
-      <p>The bus service is provided by <strong>"Nomad Car Ligne 111"</strong>. The bus ticket costs €2.90 and can be purchased directly from the driver. For the bus schedule, please refer to the 
+</li>
+</ul>
+<h3>Departure – Friday 16 May 2025</h3>
+<p>From Cabourg to Paris, one can take a bus from Cabourg to Deauville 
+(ca. 45 minutes) and then a train from Deauville to Paris (es gibt 
+keinen Direktzug von Cabourg nach Deauville).</p>
+<p>The bus service is provided by <strong>"Nomad Car Ligne 111"</strong>. The bus ticket costs €2.90 and can be purchased directly from the driver. For the bus schedule, please refer to the 
         <a href="https://plan.atoumod.fr/fr/schedules/line/ATOUMOD040:Line:1009867:LOC?fromDateTime=2025-05-16T16:04:00.000Z" target="_blank">Nomad Car Ligne 111 Schedule</a>.
       </p>
-      <p><strong>Departure Possibilities:</strong></p>
-      <ul>
-        <li>Bus CABOURG - Guillaume le Conquérant 11:59 &gt; Deauville 12:43 and Train 13:42 &gt; Paris Saint-Lazare 16:31 (one change in Lisieux)</li>
-        <li>Bus CABOURG - Guillaume le Conquérant 15:04 &gt; Deauville 15:48 and Train 16:17 &gt; Paris Saint-Lazare 18:29</li>
-        <li>Bus CABOURG - Thalasso 15:58 &gt; Deauville 16:49 and Train 17:19 &gt; Paris Saint-Lazare 19:30</li>
-        <li>Bus CABOURG - Thalasso 17:41 &gt; Deauville 18:26 and Train 19:15 &gt; Paris Saint-Lazare 21:36 (one change in Lisieux)</li>
-        <li><em>Alternatively, one may take the bus in the opposite direction (to Caen) and then a train from Caen to Paris.</em></li>
-      </ul>
-      
-      <p class="carpooling-info">If you are traveling at a different time and are interested in carpooling, please let us know.</p>
-    </section>
-    
-    <section id="schedule" class="schedule">
-      <h2>Conference Schedule</h2>
-      <p><strong>Arrival:</strong> 11 May 2025 &nbsp;&nbsp; | &nbsp;&nbsp; 
+<p><strong>Departure Possibilities:</strong></p>
+<ul>
+<li>Bus CABOURG - Guillaume le Conquérant 11:59 &gt; Deauville 12:43 and
+ Train 13:42 &gt; Paris Saint-Lazare 16:31 (one change in Lisieux)</li>
+<li>Bus CABOURG - Guillaume le Conquérant 15:04 &gt; Deauville 15:48 and Train 16:17 &gt; Paris Saint-Lazare 18:29</li>
+<li>Bus CABOURG - Thalasso 15:58 &gt; Deauville 16:49 and Train 17:19 &gt; Paris Saint-Lazare 19:30</li>
+<li>Bus CABOURG - Thalasso 17:41 &gt; Deauville 18:26 and Train 19:15 &gt; Paris Saint-Lazare 21:36 (one change in Lisieux)</li>
+<li><em>Alternatively, one may take the bus in the opposite direction (to Caen) and then a train from Caen to Paris.</em></li>
+</ul>
+<p class="carpooling-info">If you are traveling at a different time and are interested in carpooling, please let us know.</p>
+</section>
+<section class="schedule" id="schedule">
+<h2>Conference Schedule</h2>
+<p><strong>Arrival:</strong> 11 May 2025 &nbsp;&nbsp; | &nbsp;&nbsp; 
          <strong>Departure:</strong> 16 May 2025 (after lunch)</p>
-      <table class="schedule-table">
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>12 May (Monday)</th>
-            <th>13 May (Tuesday)</th>
-            <th>14 May (Wednesday)</th>
-            <th>15 May (Thursday)</th>
-            <th>16 May (Friday)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>9:00</td>
-            <td>Talk 1 (9:30)</td>
-            <td>Talk 5</td>
-            <td>Talk 10</td>
-            <td>Talk 13</td>
-            <td>Talk 18</td>
-          </tr>
-          <tr>
-            <td>10:00</td>
-            <td></td>
-            <td>Coffee break</td>
-            <td>Coffee break</td>
-            <td>Coffee break</td>
-            <td>Coffee break</td>
-          </tr>
-          <tr>
-            <td>10:30</td>
-            <td>Coffee break</td>
-            <td>Talk 6*</td>
-            <td>Talk 11</td>
-            <td>Talk 14</td>
-            <td>Talk 19</td>
-          </tr>
-          <tr>
-            <td>11:45</td>
-            <td>Talk 2 (11:00)</td>
-            <td>Talk 7* (11:30)</td>
-            <td>Talk 12* </td>
-            <td>Talk 15* </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>12:30</td>
-            <td>Lunch</td>
-            <td>Lunch</td>
-            <td>Lunch</td>
-            <td>Lunch</td>
-            <td>Lunch (12:00)</td>
-          </tr>
-          <tr>
-            <td>15:00</td>
-            <td>Talk 3</td>
-            <td>Talk 8</td>
-            <td>Free Afternoon</td>
-            <td>Talk 16</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>16:00</td>
-            <td>Coffee break</td>
-            <td>Coffee break</td>
-            <td></td>
-            <td>Coffee break</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>16:30</td>
-            <td>Talk 4</td>
-            <td>Talk 9</td>
-            <td></td>
-            <td>Talk 17</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+<table class="schedule-table">
+<thead>
+<tr>
+<th>Time</th>
+<th>12 May (Monday)</th>
+<th>13 May (Tuesday)</th>
+<th>14 May (Wednesday)</th>
+<th>15 May (Thursday)</th>
+<th>16 May (Friday)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:00</td>
+<td style="cursor: pointer;">Pazuki (9:30)</td>
+<td style="cursor: pointer;">Nicolussi</td>
+<td style="cursor: pointer;">Burgos Gil</td>
+<td style="cursor: pointer;">Dill</td>
+<td style="cursor: pointer;">Mavraki</td>
+</tr>
+<tr>
+<td>10:00</td>
+<td></td>
+<td>Coffee break</td>
+<td>Coffee break</td>
+<td>Coffee break</td>
+<td>Coffee break</td>
+</tr>
+<tr>
+<td>10:30</td>
+<td>Coffee break</td>
+<td style="cursor: pointer;">Sedillot</td>
+<td style="cursor: pointer;">Sombra</td>
+<td style="cursor: pointer;">Javanpeykar</td>
+<td style="cursor: pointer;">Gauthier</td>
+</tr>
+<tr>
+<td>11:45</td>
+<td style="cursor: pointer;">de Jong (11:00)</td>
+<td style="cursor: pointer;">Szachniewicz* </td>
+<td style="cursor: pointer;">Biswas* </td>
+<td style="cursor: pointer;">Bartsch* </td>
+<td></td>
+</tr>
+<tr>
+<td>12:30</td>
+<td>Lunch</td>
+<td>Lunch</td>
+<td>Lunch</td>
+<td>Lunch</td>
+<td>Lunch (12:00)</td>
+</tr>
+<tr>
+<td>15:00</td>
+<td style="cursor: pointer;">Pengo</td>
+<td style="cursor: pointer;">Mehmeti</td>
+<td>Free Afternoon</td>
+<td style="cursor: pointer;">Habegger</td>
+<td></td>
+</tr>
+<tr>
+<td>16:00</td>
+<td>Coffee break</td>
+<td>Coffee break</td>
+<td></td>
+<td>Coffee break</td>
+<td></td>
+</tr>
+<tr>
+<td>16:30</td>
+<td style="cursor: pointer;">Hultberg</td>
+<td style="cursor: pointer;">Pille-Schneider</td>
+<td></td>
+<td style="cursor: pointer;">Schmidt</td>
+<td></td>
+</tr>
+</tbody>
+</table>
       All talks last 1 hour, only talks marked with * last 45 minutes. 
-    </section>
-    
-    <section id="speakers" class="speakers">
-      <h2>Speakers</h2>
-      <ul class="speakers-list">
-        <li>José Ignacio Burgos Gil (ICMAT Madrid)</li>
-        <li>Gabriel Dill (Université de Neuchâtel)</li>
-        <li>Thomas Gauthier (Université Paris-Saclay)</li>
-        <li>Philipp Habegger (Universität Basel)</li>
-        <li>Ariyan Javanpeykar (Radboud Universiteit Nijmegen)</li>
-        <li>Robin de Jong (Universiteit Leiden)</li>
-        <li>Myrto Mavraki (University of Toronto)</li>
-        <li>Vlerë Mehmeti (Sorbonne Université)</li>
-        <li>Noema Nicolussi (TU Graz)</li>
-        <li>Fabien Pazuki (Københavns Universitet)</li>
-        <li>Riccardo Pengo (Università degli Studi di Messina)</li>
-        <li>Leonard Pille-Schneider (Universität Regensburg)</li>
-        <li>Rémi Reboulet (Université Claude Bernard Lyon 1)</li>
-        <li>Harry Schmidt (University of Warwick)</li>
-        <li>Martin Sombra (Universitat de Barcelona)</li>
-      </ul>
-    </section>
-    
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>For inquiries, please email us at 
+    <p><em>Click on a name in the schedule to view the title and abstract of the talk. Alternatively, download the 
+  <a href="program.pdf" download>program</a>.</em></p></section>
+<section class="speakers" id="speakers">
+<h2>Speakers</h2>
+<ul class="speakers-list">
+<li>Finn Bartsch (Radboud Universiteit Nijmegen)</li>
+<li>Debam Biswas (Universität Regensburg)</li>
+<li>José Ignacio Burgos Gil (ICMAT Madrid)</li>
+<li>Gabriel Dill (Université de Neuchâtel)</li>
+<li>Thomas Gauthier (Université Paris-Saclay)</li>
+<li>Philipp Habegger (Universität Basel)</li>
+<li>Nuno Hultberg (Westlake University)</li>
+<li>Ariyan Javanpeykar (Radboud Universiteit Nijmegen)</li>
+<li>Robin de Jong (Universiteit Leiden)</li>
+<li>Myrto Mavraki (University of Toronto)</li>
+<li>Vlerë Mehmeti (Sorbonne Université)</li>
+<li>Noema Nicolussi (TU Graz)</li>
+<li>Fabien Pazuki (Københavns Universitet)</li>
+<li>Riccardo Pengo (Università degli Studi di Messina)</li>
+<li>Leonard Pille-Schneider (Universität Regensburg)</li>
+<li>Harry Schmidt (University of Warwick)</li>
+<li>Antoine Sedillot (Universität Regensburg)</li>
+<li>Martin Sombra (Universitat de Barcelona)</li>
+<li>Michał Szachniewicz (University of Oxford)</li>
+</ul>
+</section>
+<section class="contact" id="contact">
+<h2>Contact</h2>
+<p>For inquiries, please email us at 
         <a href="mailto:arithmetic.geometry.cabourg@gmail.com">
           arithmetic.geometry.cabourg@gmail.com
         </a>.
       </p>
-    </section>
-    
-    <footer>
-      <p>&copy; 2025 Arithmetic Geometry in Cabourg. All Rights Reserved.</p>
-    </footer>
-  </div>
-</body>
-</html>
+</section>
+<footer>
+<p>© 2025 Arithmetic Geometry in Cabourg. All Rights Reserved.</p>
+</footer>
+</div>
+
+<div class="modal" id="modal" style="display: none;">
+<div class="modal-content">
+<span class="close">×</span>
+<h2><strong>Title:</strong> <span id="modal-title">Parallelogram inequality for abelian varieties and applications</span></h2>
+<h3><strong>Abstract:</strong></h3>
+<div id="modal-abstract">Let $A$ be an abelian variety defined over a 
+number field. A theorem of Rémond states that for any two finite 
+subgroup schemes $G, H$, the Faltings height of the four isogenous 
+abelian varieties $A/G, A/H, A/(G+H), A/(G\cap H)$ are linked by an 
+elegant inequality, which has important applications in diophantine 
+geometry. The goal of the talk is to present an analogous inequality for
+ abelian varieties defined over function fields (in any characteristic).
+ This is joint work with Richard Griffon and Samuel Le Fourn.</div>
+</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const talkData = {
+  "Burgos Gil": {
+    "title": "The arithmetic degree of the line bundle of Siegel–Jacobi modular forms",
+    "abstract": "The singularities of the line bundle of Siegel–Jacobi modular forms are not logarithmic and the usual techniques to deal with automorphic vector bundles on pure Shimura varieties do not apply. Yuan and Zhang have proved that this singular line bundle is an example of adelic line bundle on a quasi-projective variety. Nevertheless it is not clear whether this line bundle is integrable, so the techniques of Yuan and Zhang also do not apply. We will show how to use the recent development on relative finite energy singularities by Darvas, Di Nezza and Lu to extend Yuan and Zhang intersection product to cover the line bundle of Siegel-Jacobi modular forms and using its functorial properties we will compute its arithmetic degree. This is joint work with J. Kramer."
+  },
+  "Dill": {
+    "title": "Arithmetic Unlikely Intersections in Powers of the Multiplicative Group (or: the Deeper Meaning of 1, 1, 4, 25, 11, 153664, ...)",
+    "abstract": "In joint work in progress with Francesco Campagna, we formulate a conjecture about unlikely intersections in split semiabelian schemes over some ring of S-integers in a number field. Broadly speaking, if an intersection with a subgroup scheme is unlikely for dimension reasons, its \"size\" should not be too big compared to the \"complexity\" of the subgroup scheme. Focusing on the case of powers of the multiplicative group over the rational integers, I will show some evidence that we have acquired so far for our conjecture and discuss in some detail the example of a certain arithmetic surface inside the fibered cube of the multiplicative group over the integers, which leads to the sequence of integers from the title."
+  },
+  "Gauthier": {
+    "title": "Uniformity in arithmetic dynamics",
+    "abstract": "The dynamical Bogomolov conjecture is a dynamical counterpart of the classical Bogomolov conjecture. Roughly speaking, it states that given a polarized endomorphism f : X → X of a projective variety and a subvariety Z ⊂ X, all defined over a number field, the subvariety contains a Zariski dense and small sequence for an appropriate canonical height function if and only if it is preperidoic – except for obvious counter-examples. In a joint work with Johan Taflin and Gabriel Vigny, we study uniform versions of this conjecture. We prove several results. As a particular case, we obtain a dynamical proof of a uniform version of a Bogomolov type statement for algebraic tori."
+  },
+  "Habegger": {
+    "title": "tbd",
+    "abstract": "tbd"
+  },
+  "Hultberg": {
+	"title": "tbd",
+	"abstract": "tbd"
+  },
+  "Javanpeykar": {
+    "title": "The weakly special conjecture contradicts Orbifold Mordell (and hence abc)",
+    "abstract": "Which varieties over a number field have a potentially dense set of rational points? Lang conjectured that varieties of general type over a number field have very few rational points. In 2000, guided by Lang’s conjecture and in search of a converse statement, Abramovich, Colliot-Thélène, Harris, and Tschinkel formulated the ”Weakly Special Conjecture”: every weakly special variety over a number field has a potentially dense set of rational points. In this talk I will explain how this conjecture contradicts the abc conjecture, and more precisely Campana’s \"Orbifold Mordell\" conjecture. This is joint work with Finn Bartsch, Frederic Campana, and Olivier Wittenberg."
+  },
+  "de Jong": {
+    "title": "On Néron’s canonical local heights for abelian varieties",
+    "abstract": "This is based on joint work with Farbod Shokrieh. We review Néron’s canonical local heights on abelian varieties over non-archimedean valued fields from the point of view of Berkovich analytic spaces. Using the canonical skeleton of an abelian variety we present a refinement of Néron’s classical result relating his local heights with intersection multiplicities on the Néron model. Our results can be viewed as an extension of Tate’s explicit formulas for elliptic curves to higher dimensions. If time permits we will discuss some applications."
+  },
+  "Mavraki": {
+    "title": "tbd",
+    "abstract": "tbd"
+  },
+  "Mehmeti": {
+    "title": "Variation of the Hausdorff dimension and degenerating Schottky groups",
+    "abstract": "I will speak of the Hausdorff dimension of the limit set of a Schottky group defined over an arbitrary complete valued field. In 2021, Poineau and Turchetti constructed a moduli space for these groups using Berkovich spaces over Z. I will present a result on the continuity of the Hausdorff dimension of limit sets on this moduli space, and conclude with an application to degenerating families of complex Schottky groups. This is based on joint work with Nguyen-Bac Dang."
+  },
+  "Nicolussi": {
+    "title": "Hybrid curves and their moduli spaces",
+    "abstract": "This talk provides an introduction to hybrid curves, a geometric object which mixes Riemann surfaces and graphs, and their moduli spaces. The moduli space of hybrid curves refines the classical Deligne–Mumford compactification of the moduli space of Riemann surfaces. It provides a framwork to answer several analytic questions on degenerating Riemann surfaces (e.g., asymptotics of canonical measures and the Arakelov–Green function) which cannot be studied in the Deligne–Mumford compactification due to discontinuity phenomena. In addition, hybrid curves enjoy analogs of fundamental theorems on smooth compact Riemann surfaces, e.g. a Riemann–Roch and Abel–Jacobi theorem. In this talk, we introduce hybrid curves and overview several results. Based on joint work with Omid Amini."
+  },
+  "Pazuki": {
+    "title": "Parallelogram inequality for abelian varieties and applications",
+    "abstract": "Let A be an abelian variety defined over a number field. A theorem of Rémond states that for any two finite subgroup schemes G, H, the Faltings height of the four isogenous abelian varieties A/G, A/H, A/(G + H), A/(G ∩ H) are linked by an elegant inequality, which has important applications in diophantine geometry. The goal of the talk is to present an analogous inequality for abelian varieties defined over function fields (in any characteristic). This is joint work with Richard Griffon and Samuel Le Fourn."
+  },
+  "Pengo": {
+    "title": "Diophantine properties of special values of L-functions",
+    "abstract": "According to Northcott’s theorem, each set of algebraic numbers whose height and degree are bounded is finite. Analogous finiteness properties are also satisfied by many other heights, such as Faltings’s celebrated height. Given the many (expected and proven) links between heights and special values of L-functions (with the BSD conjecture as the most remarkable example), it is natural to ask whether the special values of an L-function satisfy a Northcott property. In this talk, based on a joint work with Fabien Pazuki, and on another joint work with Jerson Caro and Fabien Pazuki, we will explain how this Northcott property is often satisfied for special values taken at the left of the critical strip, and not satisfied on the right. We will also overview the links between these Northcott properties and those of the motivic heights defined by Kato, and also some effective aspects of our work, which aim at giving some explicit bounds for the cardinality of the finite sets that we come across."
+  },
+  "Pille-Schneider": {
+    "title": "Continuity of families of Monge-Ampère measures",
+    "abstract": "Let R be a discrete valuation ring, and (X, L)/R a normal integral polarized scheme. We prove that if φ is a continuous family of semi-positive metrics on the Berkovich analytification Xᵃⁿ, varying in a semi-positive way with respect to the base M(R) (the Berkovich spectrum of R), then the associated family of fiberwise Monge-Ampère measures is weakly continuous on the total space. I will also try to discuss some applications."
+  },
+  "Schmidt": {
+    "title": "tbd",
+    "abstract": "tbd"
+  },
+  "Sombra": {
+    "title": "tbd",
+    "abstract": "tbd"
+  },
+  "Bartsch*": {
+    "title": "Symmetric products and puncturing Campana-special varieties",
+    "abstract": "In 2001, Hassett and Tschinkel posed the following \"puncturing problem\": If X is a projective variety with at most canonical singularities such that no finite étale cover of X dominates a variety of general type and Z is a closed subset of X of codimension at least 2, does it follow that no finite étale cover of X &#92; Z dominates a variety of log-general type? Following the philosophy that maps to varieties of general type should be the main obstruction to density of rational points, they also suggested the following \"arithmetic puncturing problem\": With X and Z as above, if the rational points on X are potentially dense, are the integral points on X &#92; Z potentially dense? In this talk, I will explain how symmetric powers of products of curves provide counterexamples to both of these puncturing problems. On the other hand, conjectures of Campana suggest that the arithmetic puncturing problem has a positive answer if we additionally assume X to be smooth. This is joint work with Ariyan Javanpeykar and Aaron Levin."
+  },
+  "Biswas*": {
+    "title": "Differentiability of volumes and equidistribution on quasi-projective varieties",
+    "abstract": "In this talk, I will speak about the differentiability of arithmetic and geometric volumes in the quasi-projective setting of Yuan and Zhang. If time permits I will mention how the results can be extended to obtain logarithmic equidistribution for a subclass of logarithmically singular functions on projective varieties."
+  },
+  "Sedillot": {
+    "title": "Pseudo-absolute values and topological adelic curves",
+    "abstract": "In this talk, we will introduce an approach to Arakelov geometry over possibly uncountable base fields. To do so, we introduce objects called topological adelic curves. Roughly speaking, a topological adelic curve is a family of pseudo-absolute values (a generalisation of the usual notion of absolute value) on a given field parametrised by a topological space and such that a product formula holds. An important feature available in this context is some (embryonic) attempt to implement the analogy between Nevanlinna theory and Diophantine geometry. Moreover, this framework shares many similarities with the framework of adelic curves introduced by Chen and Moriwaki. It is also related to the theory of globally valued fields introduced by Ben Yaacov-Hrushovski. It turns out that the space of all pseudo-absolute values on a given field can be seen as an analytic space living over the Zariski-Riemann space of the field, namely the set of its valuations rings. If time permits, we will say a few words on some work in progress in the direction of understanding how analytic geometry on the space of pseudo-absolute values could help to understand adelic geometry."
+  },
+  "Szachniewicz*": {
+    "title": "Globally Valued Fields – foundations and perspectives",
+    "abstract": "I will advertise a model theoretic formalism for studying heights, defined by Ben Yaacov and Hrushovski. I will compare it to other approaches for global geometry, notably with adelic curves of Chen, Moriwaki and with adelic line bundles of Yuan, Zhang. I will mention an application of GVFs from a joint work with Pablo Destic and Nuno Hultberg. If time permits, I will pose some questions regarding the arithmetic Siu inequality and its relevance to the model theory of GVFs (based on a work in progress with Antoine Sedillot)."
+  }
+};
+
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalAbstract = document.getElementById('modal-abstract');
+  const closeBtn = document.querySelector('.close');
+
+  document.querySelectorAll('.schedule-table td').forEach(cell => {
+    // Strip out any parenthetical time info for key lookup
+    const key = cell.innerText.replace(/\s*\(.*\)/, '').trim();
+    if (talkData[key] !== undefined) {
+      cell.style.cursor = 'pointer';
+      cell.addEventListener('click', () => {
+        modalTitle.innerText = talkData[key].title;
+        modalAbstract.innerHTML = talkData[key].abstract;
+        modal.style.display = 'block';
+        if (window.MathJax) {
+          MathJax.typesetPromise([modal]);
+        }
+      });
+    }
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
+</script>
+
+
+</body></html>
